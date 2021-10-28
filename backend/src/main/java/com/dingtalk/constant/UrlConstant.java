@@ -30,5 +30,17 @@ public class UrlConstant {
      * 获取可访问企业相关信息的accessToken的URL
      */
     public static final String SUITE_ACCESS_TOKEN_URL = "https://oapi.dingtalk.com/service/get_suite_token";
+    /**
+     * 查询可发起智能办公电话的员工
+     */
+    public static final String CALL_GET_USER_LIST= "https://oapi.dingtalk.com/topapi/call/getuserlist";
+    /**
+     * 设置可发起智能办公电话的员工
+     */
+    public static final String CALL_SET_USER_LIST= "https://oapi.dingtalk.com/topapi/call/setuserlist";
+    /**
+     * 获取在职员工列表
+     */
+    public static final String QUERY_ON_JOB_LIST= "https://oapi.dingtalk.com/topapi/smartwork/hrm/employee/queryonjob";
 
 }
