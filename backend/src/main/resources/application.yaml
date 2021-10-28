@@ -1,0 +1,10 @@
+server:
+  port: 8080
+  forward-headers-strategy: FRAMEWORK
+app:
+  suite-ticket: YMEL7gcjh5vCMAud9zbwcZXbOMNXOKuCyO1AVzcdRKLkSwN3QTyFs8HK3hDK1CbkFdhXljKdkiRXjCCue2RyDQ
+  suite-key: suitetnkcvvdz06zkz9g7
+  suite-secret: hv1yq7Uoou-k4-sBsl7Fog7eeYnLNg0ykqb0KlwF4E9_9LwHtUzElJzHkfPcOBC0
+  app-id: 87392
+  token: test
+  encoding-aes-key: k1buy6zn7bckrq9v4zzwj7a98q631vc2aex7uziby2s
