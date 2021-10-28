@@ -14,10 +14,10 @@ class App extends React.Component {
       //内网穿透工具介绍:
       // https://developers.dingtalk.com/document/resourcedownload/http-intranet-penetration?pnamespace=app
       domain: "",
-      list: [
-        { userId: "1111", userName: "hahhahah" },
-        { userId: "222222", userName: "1111" },
-      ],
+      userId: "",
+      corpId: "",
+      userName: "",
+      list: [],
       ids: [],
     }
   }
@@ -28,6 +28,9 @@ class App extends React.Component {
     }
     if (this.state.userId === "") {
       this.login(corpId)
+    }
+    if (this.state.list === []) {
+      this.getList()
     }
     return (
       <div className="App">
@@ -67,13 +70,9 @@ class App extends React.Component {
   }
 
   getList() {
-    const data = {
-      corpId: sessionStorage.getItem("corpId"),
-    }
     axios
-      .get(this.state.domain + "/biz/queryOnJobList", JSON.stringify(data), {
-        headers: { "Content-Type": "application/json" },
-      })
+      .get(this.state.domain + "/biz/queryOnJobList?corpId=" + sessionStorage.getItem("corpId")
+      )
       .then((res) => {
         if (res && res.data.success) {
           if (res.data.data) {

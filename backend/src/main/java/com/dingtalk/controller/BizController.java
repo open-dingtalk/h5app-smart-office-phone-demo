@@ -10,10 +10,7 @@ import com.taobao.api.ApiException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -32,7 +29,7 @@ public class BizController {
     @Autowired
     private BizManager bizManager;
 
-    @RequestMapping("/queryOnJobList")
+    @GetMapping("/queryOnJobList")
     public RpcServiceResult queryOnJobList(@RequestParam String corpId) throws ApiException {
         log.info("queryOnJobList: corpId:{}", corpId);
         OapiSmartworkHrmEmployeeQueryonjobResponse.PageResult pageResult = bizManager.queryOnJobList(corpId);
@@ -52,7 +49,7 @@ public class BizController {
         return RpcServiceResult.getSuccessResult(userList);
     }
 
-    @RequestMapping("/setCallList")
+    @PostMapping("/setCallList")
     public RpcServiceResult setCallList(@RequestBody String param) throws ApiException {
         log.info("setCallList: param:{}", param);
         JSONObject jsonObject = JSONObject.parseObject(param);
