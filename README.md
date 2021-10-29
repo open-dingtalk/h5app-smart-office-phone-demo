@@ -83,10 +83,6 @@ npm run build
 - 启动springboot
 - 移动端钉钉点击工作台，找到创建的应用，访问应用
 
-### 运行展示
-
-
-
 ### 参考文档
 
 1. 配置第三方企业应用数据推送，文档链接：https://developers.dingtalk.com/document/app/configure-synchttp-push
